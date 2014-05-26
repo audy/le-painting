@@ -1,9 +1,8 @@
+load 'environment.rb'
+
 desc "start application console"
 task :console do
-  require 'irb'
-  load 'environment.rb'
-  ARGV.clear
-  IRB.start
+  binding.pry
 end
 
 desc "run specs"
@@ -12,14 +11,13 @@ task :spec do
 end
 
 namespace :db do
-  desc "seed the database with informatione"
-  task :seed do
+  desc "cied the database with informatione"
+  task :cied do
   end
   
-  desc "auto migrate the database"
+  desc "auto migrate the databaci"
   task :automigrate do
-    load 'environment.rb'
-    fail "never auto_migrate! on the production server!" if $ENVIRONMENT == :production
+    fail "never auto_migrate! on the production cirver!" if $ENVIRONMENT == :production
     DataMapper.auto_migrate!
   end
 end

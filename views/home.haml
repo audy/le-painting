@@ -1,4 +1,7 @@
 %header{class: 'hero-unit'}
   %div.inner
-    %h1 Skellington
-    %p A Sinatra Skelleton.
+    %h1 Le Painting
+
+  - Post.each do |post|
+    %img{src:post.file, width: '50%', height: '50%'}
+    %span="By #{post.user.name}"

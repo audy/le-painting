@@ -16,6 +16,8 @@ class User
   validates_presence_of      :password, :if => :password_required
   validates_presence_of      :name
 
+  has n, :posts
+
   ##
   # This method is for authentication purpose
   #
@@ -40,4 +42,21 @@ class User
   def encrypt_password
     self.crypted_password = Password.create(password)
   end
+end
+
+class ImageUploader < CarrierWave::Uploader::Base
+  storage :file
+  def store_dir
+    'uploads'
+  end
+end
+
+class Post
+  include DataMapper::Resource
+
+  property :id,        Serial
+
+  mount_uploader :file, ImageUploader
+  
+  belongs_to :user
 end

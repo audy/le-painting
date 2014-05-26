@@ -1,0 +1,12 @@
+Log In!
+
+%form{name: 'new_session', id: 'new_Session', action: '/session/new', method: 'post'}
+  %fieldset
+    %ol
+      %li
+        %label{for: 'user[email]'} E-Mail
+        %input{type: 'text', name: 'user[email]'}
+      %li
+        %label{for: 'user[password]'} Password
+        %input{type: 'password', name: 'user[password]'}
+    %input{type: 'submit', value: 'Join', class: 'button'}

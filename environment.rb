@@ -15,6 +15,7 @@ class Skellington < Sinatra::Base
   DB_PATH = File.join(File.dirname(__FILE__), 'db')
 
   configure :development do
+    Bundler.require :development
     DataMapper.setup(:default,
                      :adapter => 'sqlite',
                      :database => File.join(DB_PATH, 'development.db'))
@@ -24,12 +25,14 @@ class Skellington < Sinatra::Base
   end
 
   configure :production do
+    Bundler.require :production
     DataMapper.setup(:default,
                      :adapter => 'postgres',
                      :database => ENV['HEROKU_POSTGRESQL_ORANGE_URL'])
   end
 
   configure :test do
+    Bundler.require :test
     DataMapper.setup(:default, "sqlite::memory:")
   end
 

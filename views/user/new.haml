@@ -1,0 +1,15 @@
+create a new user!
+
+%form{name: 'new_user', id: 'new_user', action: '/user/new', method: 'post'}
+  %fieldset
+    %ol
+      %li
+        %label{for: 'user[name]'} Name:
+        %input{type: 'text', name: 'user[name]'}
+      %li
+        %label{for: 'user[email]'} E-Mail (for resetting passwords only!)
+        %input{type: 'text', name: 'user[email]'}
+      %li
+        %label{for: 'user[password]'} Password
+        %input{type: 'password', name: 'user[password]'}
+    %input{type: 'submit', value: 'Join', class: 'button'}

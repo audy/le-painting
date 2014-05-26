@@ -1,6 +1,16 @@
 %div{class: 'navbar navbar-fixed-top'}
-  %a{class: 'navbar-brand', href: '/'} Skellington
+  %a{class: 'navbar-brand', href: '/'} 🎨 Le Painting
 
   %ul{:class => 'nav navbar-nav'}
-    %li
-      %a{href: 'https://github.com/audy/skellington'} View Source on GitHub...
+    - unless @user.nil?
+      %li
+        %a{href: '/post/new'} Create
+      %li
+        %a{href: '/session/destroy'} Log Out
+      %li
+        %a="(Currently logged in as #{@user[:name]})"
+    - else
+      %li
+        %a{href: '/user/new'} Join
+      %li
+        %a{href: '/session/new'} Sign in
