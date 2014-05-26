@@ -3,11 +3,15 @@
 
 Create a new post!
 
-%div{class: 'literally export', id: 'literally', style: 'width:100%;height:480px;border: solid 1px #000;'}
-  %canvas{id: 'painting'}
+%div{class: 'row'}
+  %div{class: 'literally export span-12', id: 'literally', style: 'width:100%;height:480px;border: solid 1px #000;'}
+    %canvas{id: 'painting'}
 
-%form{class: 'input'}
-  %input{type: 'submit', :'data-action' => 'export-as-png', value: 'Export as PNG'}
+
+%div{class: 'row'}
+  %div{class: 'col-md-2 col-md-offset-5'}
+    %form{class: 'input'}
+      %input{type: 'submit', :'data-action' => 'export-as-png', value: 'Save', class:'btn btn-lg btn-primary'}
 
 :javascript
   function dataURLtoBlob(dataURL) {
@@ -45,8 +49,8 @@ Create a new post!
             processData: false,
             contentType: false,
             success: function(data, textStatus) {
-               if (data.redirect) { window.location.href = data.redirect; }
-             }
+              window.location.href = '/';
+            }
            });
         });
       }
