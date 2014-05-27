@@ -28,6 +28,7 @@ class Skellington < Sinatra::Base
     Bundler.require :production
     p ENV['DATABASE_URL']
     DataMapper.setup(:default,
+                     :adapter => 'postgres',
                      :database => ENV['DATABASE_URL']
                     )
   end
