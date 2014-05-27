@@ -19,6 +19,7 @@ class Skellington < Sinatra::Base
     DataMapper.setup(:default,
                      :adapter => 'sqlite',
                      :database => File.join(DB_PATH, 'development.db'))
+
     DataMapper.auto_upgrade!
     require 'sinatra/reloader'
     register Sinatra::Reloader
@@ -27,10 +28,7 @@ class Skellington < Sinatra::Base
   configure :production do
     Bundler.require :production
     p ENV['DATABASE_URL']
-    DataMapper.setup(:default,
-                     :adapter => 'postgres',
-                     :database => ENV['DATABASE_URL']
-                    )
+    DataMapper.setup(:default, ENV['DATABASE_URL'])
   end
 
   configure :test do
