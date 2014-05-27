@@ -25,7 +25,6 @@ class Skellington < Sinatra::Base
   end
 
   configure :production do
-    p ENV
     Bundler.require :production
     DataMapper.setup(:default,
                      :adapter => 'postgres',
