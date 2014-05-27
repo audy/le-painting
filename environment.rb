@@ -26,6 +26,7 @@ class Skellington < Sinatra::Base
 
   configure :production do
     Bundler.require :production
+    p ENV
     DataMapper.setup(:default,
                      :database => ENV['DATABASE_URL'])
   end
