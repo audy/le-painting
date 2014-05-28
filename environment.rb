@@ -13,7 +13,7 @@ class Skellington < Sinatra::Base
 
   DB_PATH = File.join(File.dirname(__FILE__), 'db')
 
-  DataMapper.setup(:default, :database => ENV['DATABASE_URL'])
+  DataMapper.setup :default, ENV['DATABASE_URL']
 
   configure :development do
     Bundler.require :development
