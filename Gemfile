@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'encrypted_cookie'
 gem 'data_mapper'
+gem 'dm-postgres-adapter'
 gem 'carrierwave'
 gem 'carrierwave-datamapper'
 
