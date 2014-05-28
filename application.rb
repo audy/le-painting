@@ -21,7 +21,7 @@ class Skellington < Sinatra::Base
     css :literally, ['/css/literally.css']
     js :literally, ['/js/literallycanvas.js', '/js/literallycanvas.jquery.js']
 
-    css_compression :uglify
+    css_compression :simple
     js_compression :uglify
   end
 
