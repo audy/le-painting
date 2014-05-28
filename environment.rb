@@ -14,12 +14,10 @@ class Skellington < Sinatra::Base
 
   DB_PATH = File.join(File.dirname(__FILE__), 'db')
 
+  DataMapper.setup(:default, :database => ENV['DATABASE_URL'])
+
   configure :development do
     Bundler.require :development
-    DataMapper.setup(:default,
-                     :adapter => 'sqlite',
-                     :database => File.join(DB_PATH, 'development.db'))
-
     DataMapper.auto_upgrade!
     require 'sinatra/reloader'
     register Sinatra::Reloader
@@ -27,13 +25,10 @@ class Skellington < Sinatra::Base
 
   configure :production do
     Bundler.require :production
-    puts "DATABASE_URL=#{ENV['DATABASE_URL']}"
-    DataMapper.setup(:default, ENV['DATABASE_URL'])
   end
 
   configure :test do
     Bundler.require :test
-    DataMapper.setup(:default, "sqlite::memory:")
   end
 
 end
