@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'bcrypt'
 require 'bundler'
 
 Bundler.require(:default)
