@@ -85,8 +85,9 @@ class Skellington < Sinatra::Base
     end
   end
 
-  get '/post/:id.png' do
-    Post.get(params[:id])
+  get '/post/:id' do
+    @post = Post.get(params[:id])
+    haml :'post/view'
   end
 
   get '/post/new' do

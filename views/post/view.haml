@@ -1,0 +1,4 @@
+%div
+  %img{src: @post.file}
+%div
+  %span="Drawn by #{@post.user.name} on #{@post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
