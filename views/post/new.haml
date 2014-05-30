@@ -11,7 +11,12 @@ Create a new post!
 %div{class: 'row'}
   %div{class: 'col-md-2 col-md-offset-5'}
     %form{class: 'input'}
-      %input{type: 'submit', :'data-action' => 'export-as-png', value: 'Save', class:'btn btn-lg btn-primary'}
+      %div.row
+        %div.span6
+          Title:
+          %input{type: 'text', default: 'Untitled', id: 'title'}
+        %div.span6
+          %input{type: 'submit', :'data-action' => 'export-as-png', value: 'Save', class:'btn btn-lg btn-primary'}
 
 :javascript
   function dataURLtoBlob(dataURL) {
@@ -39,6 +44,7 @@ Create a new post!
           var fd = new FormData();
 
           fd.append("image", file);
+          fd.append("title", $('#title').val());
 
           console.log(fd);
 

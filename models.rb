@@ -56,8 +56,9 @@ end
 class Post
   include DataMapper::Resource
 
-  property :id,        Serial
+  property :id,         Serial
   property :created_at, DateTime
+  property :title,      String
 
   mount_uploader :file, ImageUploader
   

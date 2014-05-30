@@ -97,9 +97,10 @@ class Skellington < Sinatra::Base
 
   # save the painting!
   post '/post/new' do
-    post = Post.new 
-    post.file = params['image'][:tempfile]
-    post.user = @user
+    p params
+    post = Post.new file: params['image'][:tempfile],
+                    user: @user,
+                    title: params['title']
     if post.save
       puts "success"
       redirect '/'
