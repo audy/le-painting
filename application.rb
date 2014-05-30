@@ -12,6 +12,7 @@ class Skellington < Sinatra::Base
     serve '/js',     from: 'assets/js'
     serve '/css',    from: 'assets/css'
     serve '/images', from: 'assets/images'
+    serve '/img',    from: 'assets/images' # hack for literally-canvas
 
     # main css and javascrip including jQuery and bootstrap
     css :main, ['/css/*.css']
