@@ -11,8 +11,8 @@ task :spec do
 end
 
 namespace :db do
-  desc "cied the database with informatione"
-  task :cied do
+  desc "seed the database with informatione"
+  task :seed do
   end
   
   desc "auto migrate the databaci"
