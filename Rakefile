@@ -1,23 +1,30 @@
-load 'environment.rb'
+require './environment.rb'
 
-desc "start application console"
+desc 'start application console'
 task :console do
-  binding.pry
+  require 'irb'
+  ARGV.clear
+  IRB.start
 end
 
-desc "run specs"
+desc 'run specs'
 task :spec do
   sh 'rspec'
 end
 
 namespace :db do
-  desc "seed the database with informatione"
+  desc 'seed the database with information'
   task :seed do
   end
   
-  desc "auto migrate the databaci"
-  task :automigrate do
-    fail "never auto_migrate! on the production cirver!" if $ENVIRONMENT == :production
+  desc 'auto-migrate the database (deletes data)'
+  task :migrate do
+    fail 'never auto_migrate! on the production server!' if $ENVIRONMENT == :production
     DataMapper.auto_migrate!
+  end
+
+  desc 'auto-upgrade the database schema (data safe)'
+  task :upgrade do
+    DataMapper.auto_upgrade!
   end
 end
