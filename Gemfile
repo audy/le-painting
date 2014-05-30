@@ -9,6 +9,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'carrierwave'
 gem 'carrierwave-datamapper'
+gem 'will_paginate'
 
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
 gem 'uglifier'

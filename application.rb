@@ -38,7 +38,12 @@ class Skellington < Sinatra::Base
   end
 
   get '/' do
+    @posts = Post.last(10)
     haml :home
+  end
+
+  get '/page/:page' do
+    @posts = Post.paginate(page: params[:page], per_page: 30)
   end
 
   get '/session/new' do
