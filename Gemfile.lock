@@ -149,6 +149,7 @@ DEPENDENCIES
   carrierwave-datamapper
   data_mapper
   dm-postgres-adapter
+  dm-timestamps
   encrypted_cookie
   haml
   pry

@@ -7,6 +7,8 @@ gem 'haml'
 gem 'encrypted_cookie'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
+gem 'dm-timestamps'
+
 gem 'carrierwave'
 gem 'carrierwave-datamapper'
 gem 'will_paginate'
