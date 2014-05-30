@@ -85,13 +85,13 @@ class Skellington < Sinatra::Base
     end
   end
 
+  get '/post/new' do
+    haml :'post/new'
+  end
+
   get '/post/:id' do
     @post = Post.get(params[:id])
     haml :'post/view'
-  end
-
-  get '/post/new' do
-    haml :'post/new'
   end
 
   # save the painting!
