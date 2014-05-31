@@ -1,10 +1,6 @@
-%header{class: 'hero-unit'}
-  %div.inner
-    %h1 Recent:
+%div.row
+  %h1 Recent:
 
+%div.row.home-page
   - @posts.each do |post|
-    %a{href: "/post/#{post.id}"}
-      %img{src: post.file, width: '50%', height: '50%'}
-    %span="\"#{post.title == '' ? 'Unitled' : post.title}\""
-    %span='by <a href="/user/' + "#{post.user.id}" '">' + "#{post.user.name}" + '</a>'
-    %span="on #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
+    = haml :'post/_post', locals: { post: post }

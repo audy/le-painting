@@ -3,7 +3,4 @@
     %h1="Posts by #{@user.name}"
 
   - @posts.each do |post|
-    %a{href: "/post/#{post.id}"}
-      %img{src: post.file, width: '50%', height: '50%'}
-    %span="\"#{post.title == '' ? 'Unitled' : post.title}\""
-    %span="by #{post.user.name} on #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
+    = haml :'post/_post', locals: { post: post }

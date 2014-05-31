@@ -1,0 +1,8 @@
+%div.row
+  %div.col-12
+    %span="\"#{post.title == '' ? 'Unitled' : post.title}\""
+    %span='by <a href="/user/' + "#{post.user.id}" '">' + "#{post.user.name}" + '</a>'
+    %span="on #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
+  %div.col-12
+    %a{href: "/post/#{post.id}"}
+      %img.img-thumbnail.painting{src: post.file}

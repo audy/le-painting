@@ -1,14 +1,14 @@
-%div{class: 'navbar navbar-fixed-top'}
-  %a{class: 'navbar-brand', href: '/'} 🎨 Le Painting
+%div{class: 'navbar navbar-top'}
+  %a{class: 'navbar-brand', href: '/'} 🎨  Le Painting
 
-  %ul{:class => 'nav navbar-nav'}
+  %ul{:class => 'nav navbar-nav pull-right'}
     - unless @user.nil?
       %li
         %a{href: '/post/new'} Create
       %li
         %a{href: '/session/destroy'} Log Out
       %li
-        %a="(Currently logged in as #{@user[:name]})"
+        %a="(#{@user[:name]})"
     - else
       %li
         %a{href: '/user/new'} Join

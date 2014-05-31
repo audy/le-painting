@@ -1,5 +1,1 @@
-%div
-  %img{src: @post.file}
-%div
-  %span="\"#{@post.title == '' ? 'Unitled' : @post.title}\""
-  %span="by #{@post.user.name} on #{@post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
+= haml :'post/_post', locals: { post: @post }
