@@ -1,21 +1,23 @@
 = js :literally
 = css :literally
 
-Create a new post!
+%div.row
+  %div.title
+    %h3
+      Create a new post!
 
-%div{class: 'row'}
+%div.row
   %div{class: 'literally export span-12', id: 'literally', style: 'width:100%;height:480px;border: solid 1px #000;'}
     %canvas{id: 'painting'}
 
-
-%div{class: 'row'}
-  %div{class: 'col-md-2 col-md-offset-5'}
-    %form{class: 'input'}
+%div.row
+  %div.col-md-2.col-md-offset-5
+    %form.input
       %div.row
-        %div.span6
+        %div.col-6
           Title:
           %input{type: 'text', default: 'Untitled', id: 'title'}
-        %div.span6
+        %div.col-6
           %input{type: 'submit', :'data-action' => 'export-as-png', value: 'Save', class:'btn btn-lg btn-primary'}
 
 :javascript

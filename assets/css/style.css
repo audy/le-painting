@@ -4,3 +4,26 @@
 .painting {
   margin-bottom: 24px;
 }
+
+.painting-header {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+#literally {
+  width: 640px;
+  height: 480px:
+  border: solid 1px #000;
+}
+
+.painting-title {
+}
+
+.painting-author {
+  font-weight: 10;
+}
+
+.painting-date {
+  font-color: #555555;
+}
