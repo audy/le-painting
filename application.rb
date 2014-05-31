@@ -86,6 +86,12 @@ class Skellington < Sinatra::Base
     end
   end
 
+  get '/user/:id' do
+    @user = User.get(params[:id])
+    @posts = Post.all user: @user
+    haml :'/user/view'
+  end
+
   get '/post/new' do
     haml :'post/new'
   end
