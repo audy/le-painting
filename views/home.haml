@@ -5,6 +5,6 @@
   - @posts.each do |post|
     %a{href: "/post/#{post.id}"}
       %img{src: post.file, width: '50%', height: '50%'}
-    %span="\"#{post.title}\""
+    %span="\"#{post.title == '' ? 'Unitled' : post.title}\""
     %span='by <a href="/user/' + "#{post.user.id}" '">' + "#{post.user.name}" + '</a>'
     %span="on #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
