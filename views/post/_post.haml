@@ -2,7 +2,7 @@
   %div.row
     %div.col-12
       %div.painting-header
-        %span.painting-title="#{post.title == '' ? 'Unitled' : post.title}"
+        %span.painting-title="&laquo;#{post.title == '' ? 'Unitled' : post.title}&raquo;"
         %span.painting-user='par <a href="/user/' + "#{post.user.id}" '">' + "#{post.user.name}" + '</a>'
         %span.painting-date="- #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
   %div.row
