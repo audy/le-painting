@@ -88,7 +88,7 @@ class Skellington < Sinatra::Base
 
   get '/user/:id' do
     @user = User.get(params[:id])
-    @posts = Post.all user: @user
+    @posts = Post.all user: @user, order: :id.desc
     haml :'/user/view'
   end
 
