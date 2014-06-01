@@ -116,4 +116,22 @@ class Skellington < Sinatra::Base
     end
   end
 
+  get '/post/:id/fork' do
+    @parent = Post.get(params[:id])
+    haml :'/post/fork/new'
+  end
+
+  post '/post/:id/fork' do
+    parent = Post.get(params[:id])
+    post = Post.new file: params['image'][:tempfile],
+                    user: @user,
+                    title: params[:title]
+    parent.forks << post
+    if post.save and parent.save
+      redirect "/post/#{post.id}"
+    else
+      # something went wrong
+      fail
+    end
+  end
 end

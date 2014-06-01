@@ -2,6 +2,9 @@
   %div.row
     %div.col-12
       %div.painting-header
+        %span.painting-fork
+          %a{href: "/post/#{post.id}/fork"} new fork
+        %span.painting-forks="#{post.forks.size} forks"
         %span.painting-title="&laquo;#{post.title == '' ? 'Unitled' : post.title}&raquo;"
         %span.painting-user='par <a href="/user/' + "#{post.user.id}" '">' + "#{post.user.name}" + '</a>'
         %span.painting-date="- #{post.created_at.strftime('%B %d, %Y') rescue 'unknown'}"
