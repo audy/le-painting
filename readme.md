@@ -1,6 +1,6 @@
 # Le Painting
 
-Source code for [painting.austinfanclub.com](painting.austinfanclub.com)
+Source code for [painting.austinfanclub.com](http://painting.austinfanclub.com)
 
 ## Requirements
 
