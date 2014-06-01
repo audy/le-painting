@@ -1,23 +1,29 @@
-# Skellington
+# Le Painting
 
-World's Greatest Sinatra Skeleton. On the food spectrum of web app
-development frameworks, it's basically a bologna sandwich.
+Source code for [painting.austinfanclub.com](painting.austinfanclub.com)
 
-DataMapper (ORM), RSpec & Webrat (Testing), Bootstrap + HAML + AssetPack
-(Composing), and Bundler (Bundling).
+## Requirements
 
-[Demo app](http://skellington.herokuapp.com) on Heroku.
+- Postgres 9.X
+- Ruby 2.1.2
+- Various gems (installed with Bundler)
 
-## Setup
-
-Tested on Ruby 2.0.0-p247
-
-```
+```bash
+# install requirements
 bundle install
+
+# specify database URL with an environment variable
+# (run once per session)
+export DATABASE_URL=postgres://$USER@127.0.0.1
+
+# migrate the database
+bundle exec rake db:migrate
+
+# start app
 bundle exec rackup
+
+# run tests
+bundle exec rspec
 ```
 
-## Merit Badges
-
-[![Build
-Status](https://travis-ci.org/audy/skellington.png?branch=master)](https://travis-ci.org/audy/skellington)
+App will auto-refresh in development mode
