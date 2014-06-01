@@ -27,3 +27,13 @@ bundle exec rspec
 ```
 
 App will auto-refresh in development mode
+
+## Deployment
+
+You need an SSH key for the deployment server.
+
+```bash
+git remote add production dokku@austinfanclub.com:painting
+
+git push production master
+```
