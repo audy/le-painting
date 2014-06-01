@@ -53,6 +53,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 end
 
+class Forkenship
+  include DataMapper::Resource
+
+  belongs_to :source, 'Post', key: true
+  belongs_to :target, 'Post', key: true
+end
+
 class Post
   include DataMapper::Resource
 
@@ -65,6 +72,13 @@ class Post
   belongs_to :user
 
   before :save, :strip_title
+
+  #
+  # forking stuff
+  #
+  
+  has n, :forkenships, child_key: [ :source_id ]
+  has n, :forks, self, through: :forkenships, via: :target
 
   private
 

@@ -35,7 +35,8 @@ describe User do
 end
 
 describe Post do
-  let (:post) { Post.create(title: 'test post ') }
+  let (:user) { User.create(name: 'testy', email: 'test@test.com', password: 'asdf') }
+  let (:post) { Post.create(title: 'test post ', user: user) }
 
   it 'can be created' do
     post.should_not be_nil
@@ -45,8 +46,18 @@ describe Post do
     post.title.should_not be_nil
   end
 
+  it 'can be saved' do
+    post.save.should be_true
+  end
+
   it 'strips title automatically before saving' do
     post.save
     post.title.should == post.title
+  end
+
+  it 'can be forked' do
+    post.forks << post
+    post.save.should be_true
+    post.forks.size.should == 1
   end
 end
