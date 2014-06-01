@@ -1,6 +1,6 @@
 %header{class: 'hero-unit'}
   %div.inner
-    %h1="Posts by #{@user.name}"
+    %h3="Posts by #{@user.name}"
 
   - @posts.each do |post|
     = haml :'post/_post', locals: { post: post }
