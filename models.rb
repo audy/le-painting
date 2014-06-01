@@ -63,4 +63,12 @@ class Post
   mount_uploader :file, ImageUploader
   
   belongs_to :user
+
+  before :save, :strip_title
+
+  private
+
+  def strip_title
+    self.title.strip!
+  end
 end

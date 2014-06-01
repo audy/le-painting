@@ -33,3 +33,20 @@ describe User do
     User.authenticate(user.email, user.password).should_not be_nil
   end
 end
+
+describe Post do
+  let (:post) { Post.create(title: 'test post ') }
+
+  it 'can be created' do
+    post.should_not be_nil
+  end
+
+  it 'has a title' do
+    post.title.should_not be_nil
+  end
+
+  it 'strips title automatically before saving' do
+    post.save
+    post.title.should == post.title
+  end
+end
