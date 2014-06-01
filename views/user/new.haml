@@ -1,15 +1,15 @@
-create a new user!
-
-%form{name: 'new_user', id: 'new_user', action: '/user/new', method: 'post'}
-  %fieldset
-    %ol
-      %li
+%div.row
+  %div.col-4
+    %legend
+      %h3 Create account
+    %form{name: 'new_user', id: 'new_user', action: '/user/new', method: 'post'}
+      %div.form-group
         %label{for: 'user[name]'} Name:
-        %input{type: 'text', name: 'user[name]'}
-      %li
+        %input.form-control{type: 'text', name: 'user[name]', placeholder: 'enter name'}
+      %div.form-group
         %label{for: 'user[email]'} E-Mail (for resetting passwords only!)
-        %input{type: 'text', name: 'user[email]'}
-      %li
+        %input.form-control{type: 'text', name: 'user[email]', placeholder: 'enter email'}
+      %div.form-group
         %label{for: 'user[password]'} Password
-        %input{type: 'password', name: 'user[password]'}
-    %input{type: 'submit', value: 'Join', class: 'button'}
+        %input.form-control{type: 'password', name: 'user[password]', placeholder: 'enter password'}
+      %input.btn.btn-primary.btn-lg{type: 'submit', value: 'Join', class: 'button'}
