@@ -1,5 +1,5 @@
 require './environment.rb'
-require 'sinatra'
+require './helpers.rb'
 
 class Skellington < Sinatra::Base
 
@@ -52,13 +52,13 @@ class Skellington < Sinatra::Base
   end
 
   get '/session/destroy' do
+    protect
+
     session[:user_id] = nil
     redirect '/'
   end
 
   post '/session/new' do
-    p params
-    p params['user']['email']
     user = User.first email: params['user']['email']
     if user.has_password? params['user']['password']
       session[:user_id] = user.id
@@ -93,6 +93,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/post/new' do
+    protect
     haml :'post/new'
   end
 
@@ -103,7 +104,8 @@ class Skellington < Sinatra::Base
 
   # save the painting!
   post '/post/new' do
-    p params
+    protect
+
     post = Post.new file: params['image'][:tempfile],
                     user: @user,
                     title: params['title']
@@ -122,6 +124,8 @@ class Skellington < Sinatra::Base
   end
 
   post '/post/:id/fork' do
+    protect
+
     parent = Post.get(params[:id])
     post = Post.new file: params['image'][:tempfile],
                     user: @user,

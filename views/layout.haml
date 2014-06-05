@@ -13,5 +13,10 @@
 
   = haml :_topbar
 
+
   %div.container
+    - if session[:flash]
+      %div.alert.alert-warning
+        %p=flash
+
     = yield
