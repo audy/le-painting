@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 ruby '2.1.2'
 
 gem 'sinatra'
-gem 'haml'
 gem 'encrypted_cookie'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'

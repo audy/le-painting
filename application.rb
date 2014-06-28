@@ -40,7 +40,7 @@ class Skellington < Sinatra::Base
 
   get '/' do
     @posts = Post.last(10)
-    haml :home
+    erb :home
   end
 
   get '/page/:page' do
@@ -48,7 +48,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/session/new' do
-    haml :'session/new'
+    erb :'session/new'
   end
 
   get '/session/destroy' do
@@ -70,7 +70,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/user/new' do
-    haml :'user/new'
+    erb :'user/new'
   end
 
   post '/user/new' do
@@ -89,17 +89,17 @@ class Skellington < Sinatra::Base
   get '/user/:id' do
     @user = User.get(params[:id])
     @posts = Post.all user: @user, order: :id.desc
-    haml :'/user/view'
+    erb :'/user/view'
   end
 
   get '/post/new' do
     protect
-    haml :'post/new'
+    erb :'post/new'
   end
 
   get '/post/:id' do
     @post = Post.get(params[:id])
-    haml :'post/view'
+    erb :'post/view'
   end
 
   # save the painting!
@@ -120,7 +120,7 @@ class Skellington < Sinatra::Base
 
   get '/post/:id/fork' do
     @parent = Post.get(params[:id])
-    haml :'/post/fork/new'
+    erb :'/post/fork/new'
   end
 
   post '/post/:id/fork' do

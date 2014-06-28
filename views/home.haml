@@ -1,7 +1,0 @@
-%div.row
-  %div.col-16
-    %h3.title Place des arts
-
-%div.row.home-page
-  - @posts.each do |post|
-    = haml :'post/_post', locals: { post: post }

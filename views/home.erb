@@ -1,0 +1,5 @@
+<div class="art-box">
+  <% @posts.each do |post| %>
+    <%= erb :'post/_post', locals: { post: post } %>
+  <% end %>
+</div>

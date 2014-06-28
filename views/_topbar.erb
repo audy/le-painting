@@ -1,0 +1,16 @@
+<div class="navbar">
+	<div class="title">
+		<h1><a href="/">Le Painting</a></h1>
+	</div>
+	<div class="nav">
+    <ul>
+      <% if logged_in? %>
+        <li><a href="/post/new">Create</a></li>
+        <li><a href="/session/destroy">Log Out</a></li>
+      <% else %> 
+        <li><a href="/user/new">Join</a></li>
+        <li><a href="/session/new">Sign In</a></li>
+      <% end %>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="art-box">
+  <h3 class="art-name">
+    <a href="/post/<%= post.id %>/fork" class="art-link">new fork</a>
+    <a class="art-static"><%= post.forks.size %> forks &laquo;<%= post.title == '' ? 'Unitled' : post.title %>&raquo; par</a>
+    <a href="/user/<%= post.user.id %>" class="art-link"><%= post.user.name %></a>
+    <a class="art-static">
+      - <%= post.created_at.strftime("%B %d, %Y") rescue "unknown" %>
+    </a>
+  </h3>
+  <a href="/post/<%= post.id %>"><img src="<%= post.file %>"></a>
+</div>

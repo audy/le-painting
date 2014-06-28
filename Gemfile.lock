@@ -83,8 +83,6 @@ GEM
     encrypted_cookie (0.0.4)
     execjs (2.0.1)
     fastercsv (1.5.5)
-    haml (4.0.3)
-      tilt
     i18n (0.6.9)
     jsmin (1.0.1)
     json (1.8.0)
@@ -151,7 +149,6 @@ DEPENDENCIES
   dm-postgres-adapter
   dm-timestamps
   encrypted_cookie
-  haml
   pry
   rack-test
   rspec
