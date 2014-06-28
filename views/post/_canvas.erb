@@ -28,23 +28,21 @@ function dataURLtoBlob(dataURL) {
 }
 </script>
 
+<script type="text/javascript">
+
 <% if defined? parent %>
-  <script type="text/javascript">
-     console.log('its a fork!');
-     var background = new Image();
-     background.src = "#{parent.file}";
-     bg_shape = new LC.ImageShape(0, 0, background);
-     var backgrounds = [bg_shape];
-  </script>
+ console.log('its a fork!');
+ var background = new Image();
+ background.src = "<%= parent.file %>";
+ bg_shape = new LC.ImageShape(0, 0, background);
+ var backgrounds = [bg_shape];
 <% else %>
-  <script type="text/javascript">
-     console.log("ceci n'est pas une forchet");
-    var backgrounds = [];
-  </script>
+  console.log("ceci n'est pas une forchet");
+  var backgrounds = [];
 <% end %>
 
-<script type="text/javascript">
 $(document).ready(function() {
+    console.log(backgrounds);
   $('.literally.export').literallycanvas({
     imageURLPrefix: "/images",
     backgroundShapes: backgrounds,
