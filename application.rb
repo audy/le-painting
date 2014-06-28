@@ -15,7 +15,8 @@ class Skellington < Sinatra::Base
     serve '/img',    from: 'assets/images' # hack for literally-canvas
 
     # main css and javascrip including jQuery and bootstrap
-    css :main, ['/css/*.css']
+    css :main, ['/css/normalize.css', '/css/style.css']
+    css :forms, ['/css/pure.css']
     js :main, ['/js/jquery-v1.10.2.js', '/js/bootstrap-v3.0.0-rc1.js']
 
     # literally.js stuff

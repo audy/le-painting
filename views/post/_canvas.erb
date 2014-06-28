@@ -1,11 +1,12 @@
 <%= js :literally %>
 <%= css :literally %>
+<%= css :forms %>
 
 <div class="art-box">
 <div class="literally export" id="literally" style="width:960px;height:480px; border: solid 1px #000;">
   <canvas id="painting"></canvas>
 </div>
-<div>
+<div style="margin-top:24px;">
   <form>
     Title: <input type="text" default="Untitled" id="title"></input>
     <input type="submit" data-action="export-as-png" value="Save"></input>
@@ -29,6 +30,7 @@ function dataURLtoBlob(dataURL) {
 
 <% if defined? parent %>
   <script type="text/javascript">
+     console.log('its a fork!');
      var background = new Image();
      background.src = "#{parent.file}";
      bg_shape = new LC.ImageShape(0, 0, background);
@@ -36,6 +38,7 @@ function dataURLtoBlob(dataURL) {
   </script>
 <% else %>
   <script type="text/javascript">
+     console.log("ceci n'est pas une forchet");
     var backgrounds = [];
   </script>
 <% end %>
