@@ -120,6 +120,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/post/:id/fork' do
+    protect
     @parent = Post.get(params[:id])
     erb :'/post/fork/new'
   end
