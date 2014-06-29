@@ -40,8 +40,8 @@ class Skellington < Sinatra::Base
   end
 
   get '/' do
-    @posts = Post.all(hidden: false, limit: 10, order: :id.desc)
-    erb :home
+    posts = Post.all(hidden: false, limit: 10, order: :id.desc)
+    erb :home, locals: { posts: posts }
   end
 
   get '/page/:page' do
@@ -88,9 +88,9 @@ class Skellington < Sinatra::Base
   end
 
   get '/user/:id' do
-    @user = User.get(params[:id])
-    @posts = Post.all user: @user, order: :id.desc
-    erb :'/user/view'
+    user = User.get(params[:id])
+    posts = Post.all user: user, order: :id.desc
+    erb :'/user/view', locals: { user: user , posts: posts }
   end
 
   get '/post/new' do
@@ -99,8 +99,8 @@ class Skellington < Sinatra::Base
   end
 
   get '/post/:id' do
-    @post = Post.get(params[:id])
-    erb :'post/view'
+    post = Post.get(params[:id])
+    erb :'post/view', locals: { post: post }
   end
 
   post '/post/:id/hide' do
@@ -128,8 +128,8 @@ class Skellington < Sinatra::Base
 
   get '/post/:id/fork' do
     protect
-    @parent = Post.get(params[:id])
-    erb :'/post/fork/new'
+    parent = Post.get(params[:id])
+    erb :'/post/fork/new', locals: { parent: parent }
   end
 
   post '/post/:id/fork' do
