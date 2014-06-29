@@ -5,7 +5,7 @@ class Skellington < Sinatra::Base
     end
 
     def admin?
-      @user.admin
+      @user.admin rescue false
     end
 
     def flash
