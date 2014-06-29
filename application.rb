@@ -40,7 +40,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/' do
-    @posts = Post.all(hidden: false, limit: 10, order: :id)
+    @posts = Post.all(hidden: false, limit: 10, order: :id.desc)
     erb :home
   end
 
