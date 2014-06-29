@@ -4,6 +4,10 @@ class Skellington < Sinatra::Base
       ! @user.nil?
     end
 
+    def admin?
+      @user.admin
+    end
+
     def flash
       message = session[:flash]
       session[:flash] = nil

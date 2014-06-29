@@ -11,6 +11,7 @@ class User
   property :id,    Serial
   property :email, String
   property :name,  String
+  property :admin, Boolean, default: false
   property :crypted_password, String, :length => 70
 
   validates_uniqueness_of    :email,    :case_sensitive => false
@@ -66,6 +67,7 @@ class Post
   property :id,         Serial
   property :created_at, DateTime
   property :title,      String
+  property :hidden, Boolean, default: false
 
   mount_uploader :file, ImageUploader
   

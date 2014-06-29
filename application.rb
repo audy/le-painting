@@ -40,7 +40,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/' do
-    @posts = Post.last(10)
+    @posts = Post.all(hidden: false, limit: 10, order: :id)
     erb :home
   end
 
@@ -101,6 +101,13 @@ class Skellington < Sinatra::Base
   get '/post/:id' do
     @post = Post.get(params[:id])
     erb :'post/view'
+  end
+
+  post '/post/:id/hide' do
+    bad_user!('youre not admin!') unless admin?
+    Post.get(params[:id]).update!({ hidden: true })
+    session[:flash] = 'Post hidden'
+    redirect '/'
   end
 
   # save the painting!
