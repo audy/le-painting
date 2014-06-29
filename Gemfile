@@ -15,6 +15,8 @@ gem 'will_paginate'
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
 gem 'uglifier'
 
+gem 'rake'
+
 group :test do
   gem 'rspec'
   gem 'webrat'
