@@ -3,13 +3,15 @@
 <%= css :forms %>
 
 <div class="art-box">
+  <form  class="form-title">
+    <!-- <span class="canvas-title">Title:</span> --><input type="text" default="Untitled" id="title" placeholder="Enter Title"></input>
+  </form>
 <div class="literally export" id="literally" style="width:960px;height:480px; border: solid 1px #000;">
   <canvas id="painting"></canvas>
 </div>
 <div style="margin-top:24px;">
-  <form>
-    Title: <input type="text" default="Untitled" id="title"></input>
-    <input type="submit" data-action="export-as-png" value="Save"></input>
+  <form class="form-save">
+    <input type="submit" data-action="export-as-png" value="Save" class="pure-button"></input>
   </form>
 </div>
 </div>

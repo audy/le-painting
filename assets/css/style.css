@@ -131,31 +131,29 @@ BUTTONS
 
 .nav ul li:first-child a {
 
-	border: 2px solid #C2E0FF;
-	padding: 4px 20px;
-	border-radius: 8px;
+	padding: 4px 10px;
+	border-radius: 4px;
 }
 
 .nav ul li:last-child a {
 
-	border: 2px solid #C2E0FF;
-	padding: 4px 11px;
-	border-radius: 8px;
+	padding: 4px 10px;
+	border-radius: 4px;
 }
 
 .nav ul li a {
 
 	text-decoration: none;
-	color: #EBF5FF;
-	font-size: 1.2em;
+	color: white;
+	font-size: 1.1em;
 	font-family: 'Cabin', sans-serif;
+	background: hsla(210, 100%, 88%, .6);
 }
 
 .nav ul li a:hover {
 
-	/*background-color: rgba(255, 255, 255, 0.85);*/
 	background-color: #EBF5FF;
-	color: #C2E0FF;
+	color: #CCCCCC;
 	border-color: #EBF5FF;
 	box-shadow: 0 0 10px #EBF5FF;
 }
@@ -210,6 +208,8 @@ ART BOX
 
 	-webkit-align-self: center;
 	align-self: center;
+
+	margin: 0 10px;
 
 	}
 
@@ -300,6 +300,85 @@ FORM
 	padding: 0;
 	color: #999;
 	margin-bottom: 20px;
+}
+
+/****************************************************************
+CANVAS
+****************************************************************/
+
+.form-title {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.form-title input {
+
+	color: #B2B2B2;
+	padding: 0;
+	font-size: 2em;
+	line-height: 1.75;
+	width: 500px;
+	margin: 20px 0;
+	border: transparent solid 1px;
+
+	-webkit-animation: blink-empty 1s infinite;
+	animation: blink-empty 1s infinite;
+}
+
+@-webkit-keyframes blink-empty {
+  50% { border-bottom: 1px solid #B2B2B2; }
+}
+
+@keyframes blink-empty {
+  50% { border-bottom: 1px solid #B2B2B2; }
+}
+
+.form-title input:focus {
+    outline: 0px !important;
+    -webkit-appearance:none;
+}
+
+::-webkit-input-placeholder {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	vertical-align: -5px;
+   color: #D8D8D8 ;
+}
+:-moz-placeholder { /* Firefox 18- */
+	text-transform: uppercase;
+	letter-spacing: -1px;
+   color: #D8D8D8 ;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	text-transform: uppercase;
+	letter-spacing: -1px;
+   color: #D8D8D8 ;  
+}
+:-ms-input-placeholder {  
+	text-transform: uppercase;
+	letter-spacing: -1px;
+   color: #D8D8D8 ;  
+}
+
+.form-save {
+	padding: 30px 0;
+}
+
+.form-save input {
+	padding: 20px;
+	width: 300px;
+	margin-left: 0;
+
+	font-family: 'Cabin', sans-serif;
+	font-size: 1.1em;
+	background-color: #C2E0FF;
+	color: white;
+	border: none;
+}
+
+.form-save input:hover {
+	background-color: #C2E0FF;
 }
 
 
@@ -413,15 +492,13 @@ BUTTONS
 	}
 
 	.nav ul li:first-child a {
-		border: 3px solid #C2E0FF;
-		padding: 10px 27px;
-		border-radius: 15px;
+		padding: 10px 10px;
+		border-radius: 4px;
 	}
 
 	.nav ul li:last-child a {
-		border: 3px solid #C2E0FF;
-		padding: 10px 15px;
-		border-radius: 15px;
+		padding: 10px 10px;
+		border-radius: 4px;
 	}
 
 	/****************************************************************
