@@ -37,3 +37,7 @@ git remote add production dokku@austinfanclub.com:painting
 
 git push production master
 ```
+
+## License
+
+MIT (see `license.md`)
