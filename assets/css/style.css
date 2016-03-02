@@ -77,7 +77,6 @@ TOP BAR
 
 .title a:hover {
   color: #EBF5FF;
-  text-shadow: 0 0 10px #EBF5FF;
 }
 
 /****************************************************************
@@ -99,19 +98,15 @@ MENU
 .nav ul {
   margin: 0;
   padding: 0;
-
   display: -webkit-box;
-    display: -moz-box;
+  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-
   -webkit-justify-content: center;
   justify-content: center;
-
   list-style: none;
 }
 
@@ -209,8 +204,8 @@ FORM
 ****************************************************************/
 .form {
   overflow: scroll;
-
 }
+
 .form ul {
   width: 100%;
   padding: 0;
