@@ -3,34 +3,34 @@ GENERAL
 ****************************************************************/
 
 body {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;    
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-	-webkit-flex-direction: column;
-	flex-direction:  column;
-  	min-height: 100%;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .wrapper {
-	order: 1;
-	flex-order: 1;
-  	width: 100%;
+  order: 1;
+  flex-order: 1;
+  width: 100%;
 
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;    
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-	-webkit-flex-direction: column;
-	flex-direction:  column;	
+  -webkit-flex-direction: column;
+  flex-direction:  column;
 
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
 }
 
 /****************************************************************
@@ -38,10 +38,8 @@ TOP BAR
 ****************************************************************/
 
 .navbar {
-
-	padding: 20px 20px 20px;
-
-	background-color: #ff6347;
+  padding: 20px 20px 20px;
+  background-color: #ff6347;
 }
 
 /****************************************************************
@@ -49,39 +47,39 @@ TOP BAR
 ****************************************************************/
 
 .title {
-	-webkit-flex: 1 70%;
-	flex: 1 80%;
+  -webkit-flex: 1 70%;
+  flex: 1 80%;
 
-	display: -webkit-box;
-  	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 
-	width: 100%;
+  width: 100%;
 
-	-webkit-justify-content: center;
-	justify-content: center;
-	
-	-webkit-align-content: baseline;
+  -webkit-justify-content: center;
+  justify-content: center;
 
-	padding-bottom: 10px;
+  -webkit-align-content: baseline;
+
+  padding-bottom: 10px;
 }
 
 .title a {
-	text-decoration: none;
-	color: #C2E0FF;
-	font-family: 'Lobster', cursive;
-	font-size: 1.4em;
-	letter-spacing: -1px;
+  text-decoration: none;
+  color: #C2E0FF;
+  font-family: 'Lobster', cursive;
+  font-size: 1.4em;
+  letter-spacing: -1px;
 }
 
 .title a:hover {
-	color: #EBF5FF;
-	text-shadow: 0 0 10px #EBF5FF;
+  color: #EBF5FF;
+  text-shadow: 0 0 10px #EBF5FF;
 }
 
 /****************************************************************
@@ -89,34 +87,34 @@ MENU
 ****************************************************************/
 
 .nav {
-	-webkit-flex: 1 20%;
-	flex: 1 30%;
+  -webkit-flex: 1 20%;
+  flex: 1 30%;
 
-	width: 100%;
-	height: 100%;
-	margin-top: -20px;
+  width: 100%;
+  height: 100%;
+  margin-top: -20px;
 
-	-webkit-align-self: center;
-	align-self: center;
+  -webkit-align-self: center;
+  align-self: center;
 }
 
 .nav ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	display: -webkit-box;
-  	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+  display: -webkit-box;
+    display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 
-	-webkit-justify-content: center;
-	justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 
-	list-style: none;
+  list-style: none;
 }
 
 /****************************************************************
@@ -124,181 +122,156 @@ BUTTONS
 ****************************************************************/
 
 .nav ul li {
-
-	padding: 10px;
+  padding: 10px;
 }
 
 .nav ul li:first-child a {
-
-	padding: 4px 10px;
-	border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .nav ul li:last-child a {
-
-	padding: 4px 10px;
-	border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .nav ul li a {
-
-	text-decoration: none;
-	color: white;
-	font-size: 1.1em;
-	font-family: 'Cabin', sans-serif;
-	background: hsla(210, 100%, 88%, .6);
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  font-family: 'Cabin', sans-serif;
+  background: hsla(210, 100%, 88%, .6);
 }
 
 .nav ul li a:hover {
-
-	background-color: #EBF5FF;
-	color: #CCCCCC;
-	border-color: #EBF5FF;
-	box-shadow: 0 0 10px #EBF5FF;
+  background-color: #EBF5FF;
+  color: #CCCCCC;
+  border-color: #EBF5FF;
+  box-shadow: 0 0 10px #EBF5FF;
 }
 
 /****************************************************************
 ART BOX
 ****************************************************************/
 .art {
-	padding: 20px 5% 0;
-
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex; 
-
-	-webkit-flex-direction: column;
-	flex-direction:  column;
+  padding: 20px 5% 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction:  column;
 }
 
 .art-name {
-	-webkit-order: 1
-	order: 1;
-
+  -webkit-order: 1
+  order: 1;
 }
 
 .art-name a {
-
-	text-align: right;
-	font-size: .86em;
-	font-family: 'Cabin', sans-serif;
-	font-weight: 700;
-	text-decoration: none;
+  text-align: right;
+  font-size: .86em;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .art-static {
-	color: #B2B2B2;
+  color: #B2B2B2;
 }
 
 .art-link {
-	color: #CCCCCC;
-	background: hsla(210, 100%, 88%, .5);
-	padding: 2px;
+  color: #CCCCCC;
+  background: hsla(210, 100%, 88%, .5);
+  padding: 2px;
 }
 
 .art-link:hover {
-
-	color: white;
+  color: white;
 }
 
 .art-box {
-
-	-webkit-align-self: center;
-	align-self: center;
-
-	margin: 0 10px;
-
-	}
+  -webkit-align-self: center;
+  align-self: center;
+  margin: 0 10px;
+}
 
 .art-box img {
-	max-width: 95%;
-
-	-webkit-order: 1;
-	order: 1;
-
-	-webkit-align-self: space-around;
-	align-self: space-around;
-
-	border: 10px solid #E6E6E6;
+  max-width: 95%;
+  -webkit-order: 1;
+  order: 1;
+  -webkit-align-self: space-around;
+  align-self: space-around;
+  border: 10px solid #E6E6E6;
 }
 
 /****************************************************************
 FORM
 ****************************************************************/
 .form {
-	overflow: scroll;
+  overflow: scroll;
+
 }
 .form ul {
-
-	width: 100%;
-
-	padding: 0;
-
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;    
-
-	-webkit-flex-direction: column;
-	flex-direction:  column;	
-
-	-webkit-align-self: center;
-	align-self: center;
-
+  width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction:  column;
+  -webkit-align-self: center;
+  align-self: center;
 }
 
 .form ul li {
-	width: 60%;
-
-	-webkit-order: 1;
-	order: 1;
-
-	list-style: none;
-	list-style-position: outside;
-
-	-webkit-align-self: center;
-	align-self: center;
+  width: 60%;
+  -webkit-order: 1;
+  order: 1;
+  list-style: none;
+  list-style-position: outside;
+  -webkit-align-self: center;
+  align-self: center;
 }
 
 .form label, input {
-	width: 100%;
-	font-family: 'Cabin', sans-serif;
-	font-size: 1.1em;
-	color: #B2B2B2;
+  width: 100%;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.1em;
+  color: #B2B2B2;
 }
 
 .form input[type="text"]:focus,
 .form input[type="password"]:focus {
-    border-color: #C2E0FF;
+  border-color: #C2E0FF;
 }
 
 .form ul li button {
-	width: 100%;
-	font-family: 'Cabin', sans-serif;
-	font-size: 1.1em;
-	background-color: #C2E0FF;
-	color: white;
-	padding: 10px;
+  width: 100%;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.1em;
+  background-color: #C2E0FF;
+  color: white;
+  padding: 10px;
 }
 
 .pure-button:hover {
-	background-color: white;
-	box-shadow: none;
-	background-image: none;
-	background-color: #C2E0FF;
-
+  background-color: white;
+  box-shadow: none;
+  background-image: none;
+  background-color: #C2E0FF;
 }
 
 .form h2 {
-	line-height: 1.75;
-	font-family: 'Cabin', sans-serif;
-	font-size: 1.4em;
-	padding: 0;
-	color: #999;
-	margin-bottom: 20px;
+  line-height: 1.75;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.4em;
+  padding: 0;
+  color: #999;
+  margin-bottom: 20px;
 }
 
 /****************************************************************
@@ -306,23 +279,21 @@ CANVAS
 ****************************************************************/
 
 .form-title {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .form-title input {
-
-	color: #B2B2B2;
-	padding: 0;
-	font-size: 2em;
-	line-height: 1.75;
-	width: 500px;
-	margin: 20px 0;
-	border: transparent solid 1px;
-
-	-webkit-animation: blink-empty 1s infinite;
-	animation: blink-empty 1s infinite;
+  color: #B2B2B2;
+  padding: 0;
+  font-size: 2em;
+  line-height: 1.75;
+  width: 500px;
+  margin: 20px 0;
+  border: transparent solid 1px;
+  -webkit-animation: blink-empty 1s infinite;
+  animation: blink-empty 1s infinite;
 }
 
 @-webkit-keyframes blink-empty {
@@ -334,85 +305,84 @@ CANVAS
 }
 
 .form-title input:focus {
-    outline: 0px !important;
-    -webkit-appearance:none;
+  outline: 0px !important;
+  -webkit-appearance:none;
 }
 
 ::-webkit-input-placeholder {
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	vertical-align: -5px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  vertical-align: -5px;
+  color: #D8D8D8;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-transform: uppercase;
+  letter-spacing: -1px;
    color: #D8D8D8 ;
 }
-:-moz-placeholder { /* Firefox 18- */
-	text-transform: uppercase;
-	letter-spacing: -1px;
-   color: #D8D8D8 ;  
-}
+
 ::-moz-placeholder {  /* Firefox 19+ */
-	text-transform: uppercase;
-	letter-spacing: -1px;
-   color: #D8D8D8 ;  
+  text-transform: uppercase;
+  letter-spacing: -1px;
+   color: #D8D8D8 ;
 }
-:-ms-input-placeholder {  
-	text-transform: uppercase;
-	letter-spacing: -1px;
-   color: #D8D8D8 ;  
+
+:-ms-input-placeholder {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+   color: #D8D8D8 ;
 }
 
 .form-save {
-	padding: 30px 0;
+  padding: 30px 0;
 }
 
 .form-save input {
-	padding: 20px;
-	width: 300px;
-	margin-left: 0;
-
-	font-family: 'Cabin', sans-serif;
-	font-size: 1.1em;
-	background-color: #C2E0FF;
-	color: white;
-	border: none;
+  padding: 20px;
+  width: 300px;
+  margin-left: 0;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.1em;
+  background-color: #C2E0FF;
+  color: white;
+  border: none;
 }
 
 .form-save input:hover {
-	background-color: #C2E0FF;
+  background-color: #C2E0FF;
 }
-
 
 /****************************************************************
 FOOTER
 ****************************************************************/
-	footer {
-	   order: 2;
-	   flex-order: 2;
+  footer {
+     order: 2;
+     flex-order: 2;
+     margin-top: 200px;
+     left: 0px;
+     bottom: 0px;
+     width: 100%;
+  }
 
-	   margin-top: 200px;
-	   left: 0px;
-	   bottom: 0px;
-	   width: 100%;
-	}
+  .footer-join {
+    margin-top: 130px;
+  }
 
-	.footer-join {
-		margin-top: 130px;
-	}
+  .foot {
+    background-color: #AAAAAA;
+    color:   #E6E6E6;
+    padding-bottom: 60px;
+  }
 
-	.foot {
-		background-color: #AAAAAA;
-		color: 	#E6E6E6;
-		padding-bottom: 60px; 
-	}
-
-	.foot h4 {
-
-		text-align: center;
-		font-size: 1em;
-		font-weight: normal;
-		font-family: 'Cabin', sans-serif;
-		text-decoration: none;
-		padding-top: 40px;
-	}
+  .foot h4 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'Cabin', sans-serif;
+    text-decoration: none;
+    padding-top: 40px;
+  }
 
 /****************************************************************
 RESPONSIVE - FULL SIZE
@@ -420,128 +390,112 @@ RESPONSIVE - FULL SIZE
 
 @media screen and (min-width: 680px) {
 
-/****************************************************************
-MENU
-****************************************************************/
+  /****************************************************************
+  MENU
+  ****************************************************************/
 
-  	.navbar { 
+  .navbar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    padding: 15px 20px 25px;
+  }
 
-	  	display: -webkit-box;
-	  	display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;    
+  .nav {
+    margin-top: 20px;
+  }
 
-		-webkit-flex-direction: column;
-		flex-direction: column;	
+  .nav ul {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-align-content: center;
+    align-content: center;
+    padding-right: 50px;
+    margin-top: -20px;
+  }
 
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
+  /****************************************************************
+  TITLE
+  ****************************************************************/
 
-		-webkit-flex-flow: row nowrap;
-		flex-flow: row nowrap;	
+  .title {
+    font-size: 1.4em;
+    padding-left: 20px;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
 
-		padding: 15px 20px 25px;
-  	}
+  /****************************************************************
+  BUTTONS
+  ****************************************************************/
 
-  	.nav {
+  .nav ul li {
+    padding: 10px;
+  }
 
-  		margin-top: 20px;
-  	}
+  .nav ul li a {
+    font-size: 1.25em;
+  }
 
-  	.nav ul {
+  .nav ul li:first-child a {
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
 
-		-webkit-justify-content: flex-end;
-		justify-content: flex-end;
-		
-		-webkit-align-content: center;
-		align-content: center;
+  .nav ul li:last-child a {
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
 
-		padding-right: 50px;
+  /****************************************************************
+  ART BOX
+  ****************************************************************/
 
-		 margin-top: -20px;
+  .art-name a {
+    font-size: 1.1em;
+  }
 
-	}
+  /****************************************************************
+  FORM
+  ****************************************************************/
 
+  .form ul li {
+    font-size: 1.2em;
+    width: 30%;
+  }
 
-/****************************************************************
-TITLE
-****************************************************************/
+  .form ul li button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
 
-	.title {
+  /****************************************************************
+  FOOTER
+  ****************************************************************/
+  .foot {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
 
-		font-size: 1.4em;
+  .foot h4 {
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+  }
 
-		padding-left: 20px;
+}
 
-		-webkit-justify-content: flex-start;
-		justify-content: flex-start;
-	}
-
-/****************************************************************
-BUTTONS
-****************************************************************/
-
-	.nav ul li {
-		padding: 10px;
-	}
-
-	.nav ul li a {
-		font-size: 1.25em;
-	}
-
-	.nav ul li:first-child a {
-		padding: 10px 10px;
-		border-radius: 4px;
-	}
-
-	.nav ul li:last-child a {
-		padding: 10px 10px;
-		border-radius: 4px;
-	}
-
-	/****************************************************************
-	ART BOX
-	****************************************************************/
-
-	.art-name a {
-
-		font-size: 1.1em;
-	}
-
-	/****************************************************************
-	FORM
-	****************************************************************/
-
-	.form ul li {
-		font-size: 1.2em;
-		width: 30%;
-	}
-
-	.form ul li button {
-		margin-top: 10px;
-		margin-left: 0;
-	}
-
-	/****************************************************************
-	FOOTER
-	****************************************************************/
-	.foot {
-		padding-bottom: 40px;
-		padding-top: 40px;
-	}
-
-	.foot h4 {
-		font-size: 1.1em;
-		margin: 0;
-		padding: 0;
-	}
-
- }
-
- @media screen and (min-width: 680px) and (max-width: 1100px) {
- 	.nav ul {
- 		margin-top: -20px;
- 		margin-left: -100px;
- 	}
+@media screen and (min-width: 680px) and (max-width: 1100px) {
+   .nav ul {
+     margin-top: -20px;
+     margin-left: -100px;
+   }
  }
