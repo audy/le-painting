@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
 
-ruby '2.1.2'
-
 gem 'sinatra'
 gem 'encrypted_cookie'
 gem 'data_mapper'
@@ -12,7 +10,8 @@ gem 'carrierwave'
 gem 'carrierwave-datamapper'
 gem 'will_paginate'
 
-gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
+gem 'sinatra-assetpack', require: 'sinatra/assetpack'
+
 gem 'uglifier'
 
 gem 'rake'
