@@ -9,6 +9,7 @@ gem 'dm-timestamps'
 gem 'carrierwave'
 gem 'carrierwave-datamapper'
 gem 'will_paginate'
+gem 'therubyracer'
 
 gem 'sinatra-assetpack', require: 'sinatra/assetpack'
 
