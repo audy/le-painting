@@ -36,7 +36,9 @@ This project uses docker-compose:
 docker-compose up -d --build
 ```
 
-You need to run a few extra commands on the first time deploy to create the
+### First Time
+
+The first time you deploy, you need to run a few extra commands to create the
 database and run the migrations:
 
 ```bash
@@ -50,6 +52,8 @@ docker-compose run --entrypoint createdb db --host db --user postgres lepainting
 
 docker-compose run --entrypoint rake web db:migrate
 ```
+
+Then `CTRL-C` the db and use the usual deployment command.
 
 ## License
 
