@@ -30,8 +30,25 @@ App will auto-refresh in development mode
 
 ## Deployment
 
+This project uses docker-compose:
+
 ```bash
 docker-compose up -d --build
+```
+
+You need to run a few extra commands on the first time deploy to create the
+database and run the migrations:
+
+```bash
+# start the database container
+docker-compose up db
+
+# create the database
+docker-compose run --entrypoint createdb db --host db --user postgres lepainting
+
+# migrate the database
+
+docker-compose run --entrypoint rake web db:migrate
 ```
 
 ## License
